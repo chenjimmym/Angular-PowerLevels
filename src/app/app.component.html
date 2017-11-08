@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <p>Power Component</p>
+    <form (submit)="calPower()">
+        Initial Power Level
+        <input type="number" [(ngModel)]="powerLevel" name="powerLevel" min="0" max="100" step="10" value="100">
+        <input type="submit" value="Calculate Powers">
+    </form>
+    <app-human [power]="power"></app-human>
+    <app-saiyan [power]="power"></app-saiyan>
+  </body>
+</html>

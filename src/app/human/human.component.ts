@@ -13,6 +13,7 @@ export class HumanComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.power = 0;
   }
 
 }

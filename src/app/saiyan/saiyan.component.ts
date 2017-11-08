@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-saiyan',
@@ -9,11 +9,15 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SaiyanComponent implements OnInit {
 
   @Input() power;
-  newPower = this.power * 10;
 
   constructor() { }
 
   ngOnInit() {
+    this.power=0;
+  }
+
+  ngOnChanges() {
+    this.power *= 10;
   }
 
 }
